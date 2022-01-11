@@ -5,4 +5,4 @@ on:
 jobs:
   call-resuable:
     name: with-if
-    uses: dptcs/actions//.github/workflows/called.yml@main
+    uses: dptcs/actions/.github/workflows/called.yml@main
