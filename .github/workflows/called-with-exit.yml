@@ -1,4 +1,4 @@
-name: Called WF
+name: Called With Exit WF
 
 on:
   workflow_call:
