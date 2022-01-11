@@ -4,28 +4,28 @@ on:
   workflow_call:
 
 jobs:
-  job1a-true-condition:
+  job1a-exit-1:
     runs-on: ubuntu-latest
     steps:
        - run: exit 1 
        - run: sleep 5
        
-  job1b-true-condition:
-    needs: job1a-true-condition
+  job1b-after-exit1:
+    needs: job1a-exit-1
     runs-on: ubuntu-latest
     steps:
     - run: date
     - run: sleep 5
 
   
-  job2a-true-condition:
+  job2a-simple-wf:
     runs-on: ubuntu-latest
     steps:
     - run: date
     - run: sleep 5
     
-  job2b-false-condition:
-    needs: job2a-true-condition
+  job2b-after-simple:
+    needs: job2a-simple-wf
     runs-on: ubuntu-latest
     steps:
     - run: date
