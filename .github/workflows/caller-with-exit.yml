@@ -4,5 +4,5 @@ on:
 
 jobs:
   call-resuable:
-    name: calling intentional exit WF
+    name: ext
     uses: dptcs/actions/.github/workflows/called-with-exit.yml@main
