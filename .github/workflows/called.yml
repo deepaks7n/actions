@@ -1,0 +1,24 @@
+name: Called WF
+
+on:
+  workflow_call:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    if: ${{  'a' == 'a' }}
+    steps:
+       - run: date
+       
+  job2:
+    needs: job1
+    if: ${{  'a' == 'a' }}
+    runs-on: ubuntu-latest
+    steps:
+    - run: date
+  
+  job3:
+    if: ${{  'a' == 'b' }}
+    runs-on: ubuntu-latest
+    steps:
+    - run: date
