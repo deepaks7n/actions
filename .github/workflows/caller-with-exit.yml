@@ -4,5 +4,5 @@ on:
 
 jobs:
   call-resuable:
-    name: with-if
+    name: calling intentional exit WF
     uses: dptcs/actions/.github/workflows/called-with-exit.yml@main
