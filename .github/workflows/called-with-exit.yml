@@ -29,3 +29,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: date
+  
+  job3a-simple-wf:
+    runs-on: ubuntu-latest
+    steps:
+    - run: date
+    
+  job3b-after-simple:
+    needs: job3a-simple-wf
+    runs-on: ubuntu-latest
+    steps:
+    - run: date
