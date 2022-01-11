@@ -1,0 +1,8 @@
+name: Caller With Exit WF
+on: 
+  workflow_dispatch
+
+jobs:
+  call-resuable:
+    name: with-if
+    uses: dptcs/actions/.github/workflows/called-with-exit.yml.yml@main
