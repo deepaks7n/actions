@@ -1,0 +1,31 @@
+name: Called WF
+
+on:
+  workflow_call:
+
+jobs:
+  job1a-true-condition:
+    runs-on: ubuntu-latest
+    steps:
+       - run: exit 1 
+       - run: sleep 5
+       
+  job1b-true-condition:
+    needs: job1a-true-condition
+    runs-on: ubuntu-latest
+    steps:
+    - run: date
+    - run: sleep 5
+
+  
+  job2a-true-condition:
+    runs-on: ubuntu-latest
+    steps:
+    - run: date
+    - run: sleep 5
+    
+  job2b-false-condition:
+    needs: job2a-true-condition
+    runs-on: ubuntu-latest
+    steps:
+    - run: date
