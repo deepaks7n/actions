@@ -9,6 +9,7 @@ jobs:
     if: ${{  'a' == 'a' }}
     steps:
        - run: date
+       - run: sleep 5
        
   job1b-true-condition:
     needs: job1a-true-condition
