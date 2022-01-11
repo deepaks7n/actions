@@ -12,7 +12,6 @@ jobs:
        
   job1b-after-exit1:
     needs: job1a-exit-1
-    if: ${{ !failure() && !cancelled() }} 
     runs-on: ubuntu-latest
     steps:
     - run: date
@@ -27,7 +26,6 @@ jobs:
     
   job2b-after-simple:
     needs: job2a-simple-wf
-    if: ${{ !failure() && !cancelled() }} 
     runs-on: ubuntu-latest
     steps:
     - run: date
@@ -39,7 +37,6 @@ jobs:
     
   job3b-after-simple:
     needs: job3a-simple-wf
-    if: ${{ !failure() && !cancelled() }} 
     runs-on: ubuntu-latest
     steps:
     - run: date
