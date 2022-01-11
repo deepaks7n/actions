@@ -1,0 +1,8 @@
+name: Caller WF
+on: 
+  workflow_dispatch:
+
+jobs:
+  call-resuable:
+    name: with-if
+    uses: dptcs/actions//.github/workflows/called.yml@main
