@@ -9,6 +9,9 @@ jobs:
 
       # Put your action repo here
       uses: dptcs/custom-py-gha@master
-      # Put an example of your mandatory inputs here
+      id: selftest
       with:
         myInput: world
+        
+    - name: Check outputs
+      run: echo "${{ steps.selftest.outputs.myOutput }}" 
