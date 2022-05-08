@@ -1,0 +1,14 @@
+name: call-custom-py-gha
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Run action
+
+      # Put your action repo here
+      uses: dptcs/custom-py-gha
+      # Put an example of your mandatory inputs here
+      with:
+        myInput: world
