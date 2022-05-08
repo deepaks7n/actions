@@ -11,7 +11,7 @@ jobs:
       uses: dptcs/custom-py-gha@master
       id: selftest
       with:
-        myInput: world
+        myInput: deepak
         
     - name: Check outputs
       run: echo "${{ steps.selftest.outputs.myOutput }}" 
